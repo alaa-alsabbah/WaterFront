@@ -1,0 +1,44 @@
+# Ignore Node.js dependencies
+node_modules/
+package-lock.json
+
+# Ignore build output
+dist/
+tmp/
+
+# Ignore environment files (security reasons)
+src/environments/environment.prod.ts
+src/environments/environment.ts
+
+# Ignore Angular cache
+.angular/
+
+# Ignore IDE/editor files
+.vscode/
+*.swp
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore logs and system files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+Thumbs.db
+
+# Ignore compiled TypeScript files
+*.js
+*.js.map
+
+# Ignore coverage reports
+coverage/
+
+# Ignore Fonts (if using local installation)
+public/fonts/
+
+# Ignore any local configuration files
+*.local
