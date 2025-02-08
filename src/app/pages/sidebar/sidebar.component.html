@@ -1,0 +1,27 @@
+<nav id="sidebar" class="bg-dark text-white vh-100">
+  <div class="sidebar-header p-3">
+    <h3>Bootstrap Sidebar</h3>
+  </div>
+
+  <ul class="list-unstyled components">
+    <li>
+      <a  (click)="toggleSubmenu('homeSubmenu')" class="dropdown-toggle">Home</a>
+      <ul [ngClass]="{'collapse': !homeSubmenuOpen}" class="list-unstyled">
+        <li><a href="#">Home 1</a></li>
+        <li><a href="#">Home 2</a></li>
+        <li><a href="#">Home 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">About</a></li>
+    <li>
+      <a  (click)="toggleSubmenu('pageSubmenu')" class="dropdown-toggle">Pages</a>
+      <ul [ngClass]="{'collapse': !pageSubmenuOpen}" class="list-unstyled">
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
