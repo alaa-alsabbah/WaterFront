@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  toggleSidebar() {
-    document.getElementById('sidebar')?.classList.toggle('d-none');
-  }
+
+ 
+  
 }

@@ -1,27 +1,37 @@
-<nav id="sidebar" class="bg-dark text-white vh-100">
-  <div class="sidebar-header p-3">
-    <h3>Bootstrap Sidebar</h3>
+<nav id="sidebar" class="text-white h-100 sidebar-container">
+  <div class="sidebar-header p-2 px-1">
+    <button class="btn btn-info me-3" (click)="toggleSidebar()">
+      <i [class]="isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left'"></i>
+    </button>
   </div>
 
   <ul class="list-unstyled components">
     <li>
-      <a  (click)="toggleSubmenu('homeSubmenu')" class="dropdown-toggle">Home</a>
+      <a (click)="toggleSubmenu('homeSubmenu')" class="dropdown-toggle">
+        <span> <i class="fa fa-home me-2"></i> <label> Home </label>  </span>
+
+      </a>
       <ul [ngClass]="{'collapse': !homeSubmenuOpen}" class="list-unstyled">
         <li><a href="#">Home 1</a></li>
         <li><a href="#">Home 2</a></li>
         <li><a href="#">Home 3</a></li>
       </ul>
     </li>
-    <li><a href="#">About</a></li>
+    <li><a href="#">
+        <span> <i class="fa-solid fa-file-lines me-2"></i> <label> Pages </label>  </span>
+
+      </a></li>
     <li>
-      <a  (click)="toggleSubmenu('pageSubmenu')" class="dropdown-toggle">Pages</a>
+      <a (click)="toggleSubmenu('pageSubmenu')" class="dropdown-toggle">
+        <span> <i class="fa-solid fa-user-tie me-2"></i> <label> Portfolio </label>  </span>
+
+      </a>
       <ul [ngClass]="{'collapse': !pageSubmenuOpen}" class="list-unstyled">
         <li><a href="#">Page 1</a></li>
         <li><a href="#">Page 2</a></li>
         <li><a href="#">Page 3</a></li>
       </ul>
     </li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#"><span> <i class="fa-regular fa-address-book me-2"></i> <label> Contact </label>  </span> </a></li>
   </ul>
 </nav>
